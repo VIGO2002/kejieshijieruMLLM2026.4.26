@@ -1,0 +1,19 @@
+请执行一次独立盲审计。
+
+你将收到以下输入：
+1. image_raw：原始图像
+2. image_overlay：候选区域可视化图
+3. image_crops：局部裁剪图（如果提供）
+4. Blind Forensic JSON：底层系统提取的盲取证证据
+
+请注意：
+- 你不能猜测最终系统裁决。
+- 你只能审计“局部证据是否成立、全局异常是否存在、两者是否冲突、当前不确定性有多高”。
+- 如果 system1_status = "NoEvidence" 且 validated_evidence_objects = 0，你必须明确承认：当前缺乏有效的局部伪造证据。
+- 你不允许编造 JSON 中不存在的局部区域，不允许臆造具体伪影。
+- 如果 image_overlay 中有框，但 Blind Forensic JSON 显示这些框未形成有效局部证据，你必须如实指出“这些只是候选或弱提示，而非已验证证据”。
+
+请严格输出一个 JSON 对象，字段必须与给定 schema 完全一致。
+
+以下是 Blind Forensic JSON：
+<PASTE_BLIND_FORENSIC_JSON_HERE>

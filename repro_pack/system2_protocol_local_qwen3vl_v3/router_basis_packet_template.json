@@ -1,0 +1,17 @@
+{
+  "dominant_mode": "__DOMINANT_MODE__",
+  "top_supporting_signals": [
+    {
+      "name": "__SIGNAL_NAME_1__",
+      "value": "__SIGNAL_VALUE_1__"
+    },
+    {
+      "name": "__SIGNAL_NAME_2__",
+      "value": "__SIGNAL_VALUE_2__"
+    },
+    {
+      "name": "__SIGNAL_NAME_3__",
+      "value": "__SIGNAL_VALUE_3__"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+﻿feature,importance
+num_singletons,0.2328993565440961
+num_raw_clusters,0.22670602815353835
+fake_prob,0.19391083161384146
+best_score_max,0.10773780581914984
+best_contrast_ratio,0.09585617595612583
+best_token_contrast,0.06733920562939917
+sys1_global_anomaly_gap,0.0423375430118709
+sys1_global_anomaly_prefix,0.03321305327197843
+evidence_coverage,0.0
+num_valid_clusters,0.0

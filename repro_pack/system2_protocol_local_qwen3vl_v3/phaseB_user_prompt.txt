@@ -1,0 +1,29 @@
+请基于以下输入，生成最终的法医解释报告。
+
+你将收到：
+1. Blind Auditor Output：独立盲审计员的结果
+2. Blind Forensic JSON：底层盲取证证据
+3. Router Decision Packet：系统最终裁决及置信度
+4. Router Basis Packet：路由器最终裁决主要依赖的关键信号
+
+请注意：
+- 你的任务不是重新判断真假，而是解释为什么系统最终做出这个裁决。
+- 如果 Blind Auditor 明确认为局部证据不足，你不能编造新的局部伪造痕迹来支持裁决。
+- 如果裁决与盲审计存在冲突，你必须明确写出这种冲突，并说明该裁决更多依赖局部证据还是全局异常/统计信号。
+- 你的输出必须忠实于 Blind Auditor Output 和 Router Basis Packet，不允许发明不存在的支撑理由。
+
+请严格输出一个 JSON 对象，字段必须与给定 schema 完全一致。
+
+以下是输入：
+
+[Blind Auditor Output]
+<PASTE_PHASE_A_OUTPUT_HERE>
+
+[Blind Forensic JSON]
+<PASTE_BLIND_FORENSIC_JSON_HERE>
+
+[Router Decision Packet]
+<PASTE_ROUTER_DECISION_PACKET_HERE>
+
+[Router Basis Packet]
+<PASTE_ROUTER_BASIS_PACKET_HERE>

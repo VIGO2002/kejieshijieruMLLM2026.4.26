@@ -1,0 +1,46 @@
+{
+  "input_csv": "system1_feature_table_train_pool.csv",
+  "model_name": "RandomForest",
+  "requested_model_type": "rf",
+  "feature_mode": "core10",
+  "has_xgboost": true,
+  "n_total_noevidence": 74,
+  "n_fake": 34,
+  "n_real": 40,
+  "feature_count": 10,
+  "feature_cols": [
+    "fake_prob",
+    "best_score_max",
+    "best_contrast_ratio",
+    "best_token_contrast",
+    "evidence_coverage",
+    "num_raw_clusters",
+    "num_singletons",
+    "num_valid_clusters",
+    "sys1_global_anomaly_prefix",
+    "sys1_global_anomaly_gap"
+  ],
+  "cv_metrics": {
+    "cv_ran": true,
+    "cv_model_name": "RandomForest",
+    "cv_folds": 5,
+    "cv_accuracy_mean": 0.8657142857142859,
+    "cv_accuracy_std": 0.058584977139922646,
+    "cv_precision_mean": 0.95,
+    "cv_precision_std": 0.09999999999999999,
+    "cv_recall_mean": 0.7666666666666667,
+    "cv_recall_std": 0.11106575037800571,
+    "cv_f1_mean": 0.8385547785547786,
+    "cv_f1_std": 0.07213427479746641,
+    "cv_roc_auc_mean": 0.925,
+    "cv_roc_auc_std": 0.07266782124777073
+  },
+  "final_train_metrics": {
+    "train_accuracy": 0.972972972972973,
+    "train_precision": 1.0,
+    "train_recall": 0.9411764705882353,
+    "train_f1": 0.9696969696969697,
+    "train_roc_auc": 1.0
+  },
+  "note": "cv_metrics 是更值得参考的泛化指标；final_train_metrics 只是全部 NoEvidence 数据上的训练内 sanity check。"
+}

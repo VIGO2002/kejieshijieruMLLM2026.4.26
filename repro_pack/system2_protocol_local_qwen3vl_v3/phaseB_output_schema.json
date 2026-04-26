@@ -1,0 +1,7 @@
+{
+  "Final_Verdict_Statement": "一句话陈述最终系统裁决及其置信度。",
+  "Verdict_Support_Relation": "Consistent | Partially Supported | Contested",
+  "Verdict_Justification": "解释系统最终裁决的核心支撑点。必须明确区分：该裁决主要依赖局部证据、全局异常信号，还是两者共同作用。",
+  "Auditor_Router_Reconciliation": "如果 Blind Auditor 与 Router 结论存在差异，请解释这种差异与冲突的来源，并说明为什么系统仍然做出当前裁决。",
+  "Residual_Risk_Statement": "声明当前解释剩余的不确定性、潜在假阳性/假阴性风险，或当前裁决依赖统计学信号而非局部铁证的事实。"
+}

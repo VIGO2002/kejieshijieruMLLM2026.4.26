@@ -1,0 +1,177 @@
+{
+  "model_type": "RandomForest",
+  "requested_model_type": "rf",
+  "train_csv": "fusion_training_table_rf_core10_nos2_train.csv",
+  "holdout_csv": "fusion_training_table_rf_core10_nos2_holdout.csv",
+  "n_train_samples": 110,
+  "feature_count": 47,
+  "feature_cols": [
+    "status_high",
+    "status_weak",
+    "status_none",
+    "fake_prob",
+    "best_score_max",
+    "best_contrast_ratio",
+    "best_token_contrast",
+    "evidence_coverage",
+    "num_raw_clusters",
+    "num_singletons",
+    "num_valid_clusters",
+    "pixel_any_passed",
+    "token_any_passed",
+    "has_any_passed",
+    "has_high_conf",
+    "rescued_by_token",
+    "num_proposal_objects",
+    "num_validated_objects",
+    "num_high_objects",
+    "num_weak_objects",
+    "num_rejected_objects",
+    "proposal_score_top1",
+    "proposal_score_top3_mean",
+    "proposal_score_top5_mean",
+    "proposal_token_top1",
+    "proposal_token_top3_mean",
+    "proposal_token_top5_mean",
+    "proposal_ratio_top1",
+    "proposal_ratio_top3_mean",
+    "proposal_patch_top1",
+    "proposal_patch_sum",
+    "validated_score_top1",
+    "validated_score_top3_mean",
+    "validated_token_top1",
+    "validated_token_top3_mean",
+    "validated_ratio_top1",
+    "validated_ratio_top3_mean",
+    "validated_patch_top1",
+    "validated_patch_sum",
+    "sys1_global_anomaly_prefix",
+    "sys1_global_anomaly_gap",
+    "noevidence_fake_score",
+    "is_noevidence_status",
+    "is_high_status",
+    "is_weak_status",
+    "is_none_status",
+    "noevidence_fake_score_masked"
+  ],
+  "cv_metrics": {
+    "cv_ran": true,
+    "cv_model_name": "RandomForest",
+    "cv_folds": 5,
+    "cv_accuracy_mean": 0.9727272727272727,
+    "cv_accuracy_std": 0.022268088570756146,
+    "cv_roc_auc_mean": 1.0,
+    "cv_roc_auc_std": 0.0,
+    "cv_f1_mean": 0.9782886334610472,
+    "cv_f1_std": 0.017751775585076953,
+    "cv_precision_mean": 0.9866666666666667,
+    "cv_precision_std": 0.02666666666666666,
+    "cv_recall_mean": 0.9714285714285715,
+    "cv_recall_std": 0.03499271061118824
+  },
+  "train_metrics": {
+    "train_accuracy": 1.0,
+    "train_precision": 1.0,
+    "train_recall": 1.0,
+    "train_f1": 1.0,
+    "train_roc_auc": 1.0
+  },
+  "holdout_metrics": {
+    "n_holdout_samples": 70,
+    "n_holdout_fake": 45,
+    "n_holdout_real": 25,
+    "holdout_accuracy": 0.9285714285714286,
+    "holdout_precision": 0.9347826086956522,
+    "holdout_recall": 0.9555555555555556,
+    "holdout_f1": 0.945054945054945,
+    "holdout_roc_auc": 0.968,
+    "holdout_confusion_matrix": {
+      "tn": 22,
+      "fp": 3,
+      "fn": 2,
+      "tp": 43
+    }
+  },
+  "top_features": [
+    {
+      "feature": "noevidence_fake_score",
+      "importance": 0.19667866586516333
+    },
+    {
+      "feature": "fake_prob",
+      "importance": 0.09144146922053982
+    },
+    {
+      "feature": "noevidence_fake_score_masked",
+      "importance": 0.09039807826625806
+    },
+    {
+      "feature": "num_rejected_objects",
+      "importance": 0.07044262814224009
+    },
+    {
+      "feature": "proposal_patch_sum",
+      "importance": 0.05875052735459146
+    },
+    {
+      "feature": "num_raw_clusters",
+      "importance": 0.054747084676998646
+    },
+    {
+      "feature": "num_singletons",
+      "importance": 0.04964731825842559
+    },
+    {
+      "feature": "is_noevidence_status",
+      "importance": 0.03099696501450546
+    },
+    {
+      "feature": "best_score_max",
+      "importance": 0.030995763015049527
+    },
+    {
+      "feature": "proposal_score_top3_mean",
+      "importance": 0.028736923880387944
+    },
+    {
+      "feature": "proposal_score_top5_mean",
+      "importance": 0.027819581658786677
+    },
+    {
+      "feature": "proposal_token_top5_mean",
+      "importance": 0.021836447426104917
+    },
+    {
+      "feature": "proposal_score_top1",
+      "importance": 0.020803943085772054
+    },
+    {
+      "feature": "is_none_status",
+      "importance": 0.020141558334274546
+    },
+    {
+      "feature": "proposal_token_top3_mean",
+      "importance": 0.017956251717524904
+    },
+    {
+      "feature": "status_none",
+      "importance": 0.017133672126043643
+    },
+    {
+      "feature": "proposal_ratio_top1",
+      "importance": 0.013399389092339273
+    },
+    {
+      "feature": "best_token_contrast",
+      "importance": 0.01333629776685855
+    },
+    {
+      "feature": "proposal_patch_top1",
+      "importance": 0.012342923886416588
+    },
+    {
+      "feature": "has_any_passed",
+      "importance": 0.011568387611289107
+    }
+  ]
+}

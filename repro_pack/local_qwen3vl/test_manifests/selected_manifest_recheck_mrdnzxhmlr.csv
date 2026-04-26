@@ -1,0 +1,2 @@
+﻿protocol_bucket,case_name,gt_label,pred_label,correct,status,dataset,source_type,pred_prob_fake,fake_prob,noevidence_fake_score,sys1_global_anomaly_gap,linked_case_dir,original_case_dir
+NoEvidence_Fake,TrainPool__Fake_None__mrdnzxhmlr,Fake,Fake,1,NoEvidence,ldm_200_cfg/ldm_200_cfg,Unknown,0.9963581367211132,0.7256997227668762,1.0,0.2643754482269287,explainer_eval_set_50plus/cases/TrainPool__Fake_None__mrdnzxhmlr,system2_holdout_pool_exports/TrainPool__Fake_None__mrdnzxhmlr

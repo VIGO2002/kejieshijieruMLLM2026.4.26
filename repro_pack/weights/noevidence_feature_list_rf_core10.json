@@ -1,0 +1,12 @@
+[
+  "fake_prob",
+  "best_score_max",
+  "best_contrast_ratio",
+  "best_token_contrast",
+  "evidence_coverage",
+  "num_raw_clusters",
+  "num_singletons",
+  "num_valid_clusters",
+  "sys1_global_anomaly_prefix",
+  "sys1_global_anomaly_gap"
+]

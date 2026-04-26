@@ -1,0 +1,32 @@
+{
+  "case_name": "__CASE_NAME__",
+  "image_meta": {
+    "image_width": "__IMAGE_WIDTH__",
+    "image_height": "__IMAGE_HEIGHT__",
+    "crops_provided": "__CROPS_PROVIDED__",
+    "crop_count": "__CROP_COUNT__"
+  },
+  "local_evidence_block": {
+    "system1_status": "__SYSTEM1_STATUS__",
+    "validated_evidence_objects": "__NUM_VALIDATED_OBJECTS__",
+    "best_score_max": "__BEST_SCORE_MAX__",
+    "best_token_contrast": "__BEST_TOKEN_CONTRAST__",
+    "evidence_coverage": "__EVIDENCE_COVERAGE__",
+    "validated_evidence_objects_detail": [
+      {
+        "region_id": "__REGION_ID__",
+        "support_level": "__SUPPORT_LEVEL__",
+        "bbox": ["__X1__", "__Y1__", "__X2__", "__Y2__"],
+        "score_max": "__REGION_SCORE_MAX__",
+        "token_contrast": "__REGION_TOKEN_CONTRAST__",
+        "note": "__REGION_NOTE__"
+      }
+    ]
+  },
+  "global_signal_block": {
+    "fake_prob": "__FAKE_PROB__",
+    "sys1_global_anomaly_prefix": "__SYS1_GLOBAL_ANOMALY_PREFIX__",
+    "sys1_global_anomaly_gap": "__SYS1_GLOBAL_ANOMALY_GAP__",
+    "noevidence_expert_score": "__NOEVIDENCE_EXPERT_SCORE__"
+  }
+}

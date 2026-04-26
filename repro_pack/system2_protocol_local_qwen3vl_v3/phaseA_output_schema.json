@@ -1,0 +1,10 @@
+{
+  "Local_Evidence_Level": "Strong | Weak | Insufficient",
+  "Global_Anomaly_Level": "High | Medium | Low",
+  "Conflict_Flag": true,
+  "Uncertainty_Level": "High | Medium | Low",
+  "Evidence_Summary": "简要概述当前局部证据、候选区域、以及全局异常信号的状态。必须明确区分局部证据与全局统计可疑性。",
+  "Visual_vs_Data_Conflict": "说明图像视觉直觉与盲取证证据之间是否存在一致或冲突。如果有冲突，必须明确指出冲突发生在局部证据层面还是全局信号层面。",
+  "Uncertainty_Declaration": "说明当前审计结论受哪些限制影响。如果局部证据不足，必须明确承认这一点。",
+  "Independent_Audit_Conclusion": "Strong Local Support | Weak Local Support | Insufficient Local Evidence"
+}

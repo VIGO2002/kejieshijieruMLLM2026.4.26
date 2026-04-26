@@ -1,0 +1,2 @@
+﻿protocol_bucket,case_name,gt_label,pred_label,correct,status,dataset,source_type,pred_prob_fake,linked_case_dir,original_case_dir
+High_Fake,TrainPool__Fake_High__00219321,Fake,Fake,1,HighConfidenceEvidence,biggan/biggan,Unknown,0.9912121212121212,protocol_debug_set/cases/TrainPool__Fake_High__00219321,system2_holdout_pool_exports/TrainPool__Fake_High__00219321
