@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import shutil
 from pathlib import Path
@@ -7,6 +8,18 @@ from typing import Any, Dict, List, Tuple
 import torch
 from PIL import Image, ImageDraw
 from torchvision import transforms
+
+
+# ===============================================================
+# 路径兼容：保证从任意目录运行时，都能找到 fgts_core
+# 当前文件: repro_pack/export/export_system2_cases.py
+# REPRO_ROOT: repro_pack
+# ===============================================================
+REPRO_ROOT = Path(__file__).resolve().parents[1]
+FGTS_CORE_DIR = REPRO_ROOT / "fgts_core"
+
+if str(FGTS_CORE_DIR) not in sys.path:
+    sys.path.insert(0, str(FGTS_CORE_DIR))
 
 # 直接复用当前冻结的 System 1 规则与辅助函数
 from cross_domain_eval import (
@@ -172,7 +185,7 @@ SELECTED_CASES = [
     },
 ]
 
-OUTPUT_ROOT = "system2_case_exports_18"
+OUTPUT_ROOT = str(REPRO_ROOT / "system2_case_exports_18")
 CROP_PADDING_RATIO = 0.15  # crop 外扩比例
 
 
@@ -352,7 +365,11 @@ def load_system1(device: str):
     model.eval()
     num_prefix = getattr(model.backbone, "num_prefix_tokens", 5)
 
-    ckpt = torch.load('checkpoints/AIGCDetectionBenchmark/linear_probe.pth', map_location=device)
+    ckpt_path = REPRO_ROOT / "checkpoints" / "AIGCDetectionBenchmark" / "linear_probe.pth"
+    if not ckpt_path.exists():
+        raise FileNotFoundError(f"[!] 找不到 linear probe 权重: {ckpt_path}")
+
+    ckpt = torch.load(str(ckpt_path), map_location=device)
     official_fisher_indices = ckpt.get("token_indices", None)
     assert official_fisher_indices is not None and len(official_fisher_indices) > 0, "[!] 致命错误: token_indices 缺失！"
 
@@ -512,6 +529,8 @@ def export_case(case_cfg: Dict[str, Any], export_root: str, system1_bundle, devi
     model, linear_probe, official_fisher_indices, num_prefix, transform = system1_bundle
 
     image_path = case_cfg["image_path"]
+    if not os.path.isabs(image_path):
+        image_path = str(REPRO_ROOT / image_path)
     filename = case_cfg["filename"]
     case_tag = case_cfg["case_tag"]
     dataset_name = case_cfg["dataset_name"]
